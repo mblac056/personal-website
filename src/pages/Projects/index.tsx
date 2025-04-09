@@ -21,20 +21,20 @@ const ProjectsPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto px-4 py-8"
+      className="max-w-4xl mx-auto"
     >
       <h1 className="text-4xl font-bold mb-8">Projects</h1>
       
-      {/* Year filter */}
+      {/* Technology filter */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Filter by Technology</h2>
+        <h2 className="text-lg font-semibold mb-4">Filter by Technology</h2>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedTechnology(null)}
             className={`text-sm px-2 py-1 rounded-full transition-colors ${
               selectedTechnology === null 
                 ? 'bg-[--primary-color] text-white' 
-                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                : 'bg-gray-300 text-gray-900 hover:bg-gray-400'
             }`}
           >
             All
@@ -46,7 +46,7 @@ const ProjectsPage = () => {
               className={`text-sm px-2 py-1 rounded-full transition-colors ${
                 selectedTechnology === technology 
                   ? 'bg-[--primary-color] text-white' 
-                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                  : 'bg-gray-300 text-gray-900 hover:bg-gray-400'
               }`}
             >
               {technology}
