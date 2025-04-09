@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useSearchParams, useParams, useNavigate } from 'react-router-dom';
 import CrosswordPuzzle from './CrosswordPuzzle';
-import { crosswords, Crossword } from '../../../public/data/crosswords';
+import { crosswords, Crossword } from '../../data/crosswords';
 
 const AVAILABLE_TAGS = [
   { name: 'Barbershop', emoji: '💈' },

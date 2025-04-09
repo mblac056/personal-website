@@ -2,10 +2,11 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import ResumeSection from './ResumeSection';
 import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
-import phone from '/images/phone.svg';
-import email from '/images/email.svg';
-import home from '/images/home.svg';
-
+import phone from '../../images/phone.svg';
+import email from '../../images/email.svg';
+import home from '../../images/home.svg';
+import caretDown from '../../images/caret-down.svg';
+import caretUp from '../../images/caret-up.svg';
 
 const sliderStyle = `
   .multi-range-slider .thumb::before {
@@ -63,6 +64,12 @@ const ResumePage = () => {
     );
   };
 
+  const [isFiltersExpanded, setIsFiltersExpanded] = useState(false);
+
+  const toggleFilters = () => {
+    setIsFiltersExpanded(!isFiltersExpanded);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -73,43 +80,51 @@ const ResumePage = () => {
       <style>{sliderStyle}</style>
 
       <section className="mb-16 max-w-4xl mx-auto lg:grid lg:grid-cols-[250px_1fr] lg:gap-8">
-        <div className="mb-8 lg:mb-0 lg:sticky lg:top-4 lg:self-start">
+        <div className="mb-4 lg:mb-0 lg:sticky lg:top-4 lg:self-start">
           <h2 className="text-3xl font-bold mb-6">Resume</h2>
-          <div className="flex flex-wrap gap-2">
-            {areasOfFocus.map(area => (
-              <button
-                key={area}
-                onClick={() => toggleArea(area)}
-                className={`px-3 py-1 text-sm rounded-full transition-colors ${
-                  selectedAreas.includes(area) 
-                    ? 'bg-[--primary-color] text-white' 
-                    : 'bg-gray-300 text-gray-900 hover:bg-gray-400'
-                }`}
-              >
-                {area}
-              </button>
-            ))}
+          <div className="flex flex-row gap-2">
+            <h3 className="text-lg font-bold mb-2">Filters</h3>
+            <button onClick={toggleFilters} className="lg:hidden relative top-[-0.3rem]">
+              <img src={isFiltersExpanded ? caretUp : caretDown} alt="Caret down" className="w-4 h-4" />
+            </button>
           </div>
+          <div id="filters" className={`flex flex-col gap-2 ${isFiltersExpanded ? 'block' : 'hidden'} lg:block`}>
+            <div className="flex flex-wrap gap-2">
+              {areasOfFocus.map(area => (
+                <button
+                  key={area}
+                  onClick={() => toggleArea(area)}
+                  className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                    selectedAreas.includes(area) 
+                      ? 'bg-[--primary-color] text-white' 
+                      : 'bg-gray-300 text-gray-900 hover:bg-gray-400'
+                  }`}
+                >
+                  {area}
+                </button>
+              ))}
+            </div>
 
-          <div className="mt-4 space-y-4">
+            <div className="mt-4 space-y-4">
 
-            <div className="flex flex-col gap-2">
-              <span className="text-base font-bold text-gray-700">
-                Year range: <span className="font-normal">{yearRange[0]} to {yearRange[1]}</span>
-              </span>
-              <MultiRangeSlider
-                min={minYear}
-                max={maxYear}
-                step={1}
-                minValue={yearRange[0]}
-                maxValue={yearRange[1]}
-                onChange={(e: ChangeResult) => {
-                  setYearRange([e.minValue, e.maxValue]);
-                }}
-                label={false}
-                ruler={false}
-                canMinMaxValueSame={true}
-              />
+              <div className="flex flex-col gap-2">
+                <span className="text-base font-bold text-gray-700">
+                  Year range: <span className="font-normal">{yearRange[0]} to {yearRange[1]}</span>
+                </span>
+                <MultiRangeSlider
+                  min={minYear}
+                  max={maxYear}
+                  step={1}
+                  minValue={yearRange[0]}
+                  maxValue={yearRange[1]}
+                  onChange={(e: ChangeResult) => {
+                    setYearRange([e.minValue, e.maxValue]);
+                  }}
+                  label={false}
+                  ruler={false}
+                  canMinMaxValueSame={true}
+                />
+              </div>
             </div>
           </div>
         </div>

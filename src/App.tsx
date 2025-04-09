@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import { AnimatePresence } from 'framer-motion';
 import ResumePage from './pages/Resume';
 import Crosswords from './pages/Crosswords';
-import NoMatch from './pages/404/index.tsx';
+import NoMatch from './pages/404';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/crosswords" element={<Crosswords />} />
             <Route path="/crosswords/:puzzleId" element={<Crosswords />} />
             <Route path="/resume" element={<ResumePage />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="*" element={<NoMatch />} />
           </Routes>
         </AnimatePresence>
