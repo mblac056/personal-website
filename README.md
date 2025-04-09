@@ -1,6 +1,6 @@
 # Michael Black's Personal Website
 
-A modern, responsive personal website built with React, TypeScript, and Tailwind CSS. The website features a dynamic resume, a photo gallery, and an interactive crossword puzzle solver.
+A modern, responsive personal website built with React, TypeScript, and Tailwind CSS. The website features a dynamic resume, a project section, and a list of crosswords I've constructed.
 
 ## Features
 
@@ -10,24 +10,12 @@ A modern, responsive personal website built with React, TypeScript, and Tailwind
   - Timeline-based layout with visual indicators
   - Responsive design for all screen sizes
 
-- **Rowan's Journey**
-  - Photo gallery with smooth animations
-  - Lightbox view for detailed photo inspection
-  - Responsive grid layout
-  - Hover effects and transitions
-
-- **Crossword Puzzles**
-  - Interactive puzzle solver
-  - Support for .puz file format
-  - Responsive grid layout
-  - Clue navigation and answer checking
 
 ## Tech Stack
 
 - React 18
 - TypeScript
 - Tailwind CSS
-- DaisyUI
 - Framer Motion
 - Vite
 
@@ -86,6 +74,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Vite](https://vitejs.dev/)
