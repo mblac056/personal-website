@@ -81,10 +81,10 @@ const ResumePage = () => {
 
       <section className="mb-16 max-w-4xl mx-auto lg:grid lg:grid-cols-[250px_1fr] lg:gap-8">
         <div className="mb-4 lg:mb-0 lg:sticky lg:top-4 lg:self-start">
-          <h2 className="text-4xl font-bold mb-6">Resume</h2>
-          <div className="flex flex-row gap-2">
+          <h2 className="text-4xl font-bold mb-4">Resume</h2>
+          <div className="flex flex-row gap-1">
             <h3 className="text-lg font-bold mb-2">Filters</h3>
-            <button onClick={toggleFilters} className="lg:hidden relative top-[-0.3rem]">
+            <button onClick={toggleFilters} className="lg:hidden -mt-2">
               <img src={isFiltersExpanded ? caretUp : caretDown} alt="Caret down" className="w-4 h-4" />
             </button>
           </div>
