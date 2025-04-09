@@ -116,10 +116,10 @@ const ResumePage = () => {
 
         <div className="bg-white p-4 shadow-md px-6 py-8 text-xs sm:px-12 sm:py-12">
           <h2 className="text-3xl font-bold mb-2 text-center"><span className="font-thin">Michael</span> Black</h2>
-          <div className="flex justify-between gap-6 text-xs">
-              <div className="flex items-center gap-2 sm:flex-row flex-col"><img src={phone} alt="Phone" className="w-4 h-4" /><a href="tel:226-343-5363">226-343-5363</a></div> 
-              <div className="flex items-center gap-2 sm:flex-row flex-col"><img src={email} alt="Email" className="w-4 h-4" /><a href="mailto:michael@michaelblack.ca">michael@michaelblack.ca</a></div>
-              <div className="flex items-center gap-2 sm:flex-row flex-col"><img src={home} alt="Home" className="w-4 h-4" />Fergus, Ontario</div>
+          <div className="flex justify-between flex-col gap-1 items-center sm:flex-row sm:gap-6 text-xs">
+              <div className="flex items-center gap-2 flex-row "><img src={phone} alt="Phone" className="w-4 h-4" /><a href="tel:226-343-5363">226-343-5363</a></div> 
+              <div className="flex items-center gap-2 flex-row"><img src={email} alt="Email" className="w-4 h-4" /><a href="mailto:michael@michael-black.com">michael@michael-black.com</a></div>
+              <div className="flex items-center gap-2 flex-row"><img src={home} alt="Home" className="w-4 h-4" />Fergus, Ontario</div>
           </div>
           <hr className="border-t border-gray-300 mt-2 mb-4" />
           <ResumeSection

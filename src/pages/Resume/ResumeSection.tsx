@@ -12,6 +12,22 @@ interface ResumeSectionProps {
   isFirstSection?: boolean;
 }
 
+const ExpandButton: React.FC<{
+  isExpanded: boolean;
+  onClick: () => void;
+}> = ({ isExpanded, onClick }) => {
+  return (
+    <button onClick={onClick} className="inline-flex items-center text-gray-500 hover:text-gray-700">
+      <img 
+        src={isExpanded ? caretUp : caretDown} 
+        alt={isExpanded ? "Caret up" : "Caret down"} 
+        className="w-4 h-4 opacity-50 pt-1" 
+      />
+    </button>
+  );
+};
+
+
 const ResumeSection: React.FC<ResumeSectionProps> = ({
   title,
   type,
@@ -85,7 +101,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
   }
 
   return (
-    <div className="mb-8">
+    <div className="mb-6">
       <h3 className="text-base font-semibold mb-4">
         <span className="inline-block bg-[--primary-color] px-4 py-2 text-white uppercase rounded-sm">
           {title}
@@ -134,17 +150,10 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                             {item.title} {!hasMultipleInGroup && item.organization !== 'Quartets' && item.organization !== 'Choruses' && `- ${item.organization}`
                             }
                             {item.description && (
-                              <button
+                              <ExpandButton
+                                isExpanded={expandedItems.includes(item.id)}
                                 onClick={() => toggleExpand(item.id)}
-                                className="ml-2 inline-flex items-center text-gray-500 hover:text-gray-700"
-                                aria-label={expandedItems.includes(item.id) ? "Show less" : "Show more"}
-                              >
-                                <img 
-                                  src={expandedItems.includes(item.id) ? caretUp : caretDown} 
-                                  alt={expandedItems.includes(item.id) ? "Caret up" : "Caret down"} 
-                                  className="w-4 h-4 opacity-50 pt-1" 
-                                />
-                              </button>
+                              />
                             )}
                           </p>
                         ) : (
@@ -153,17 +162,10 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                               <p className="font-bold text-gray-900">
                                 {item.title}
                                 {item.description && (
-                                  <button
+                                  <ExpandButton
+                                    isExpanded={expandedItems.includes(item.id)}
                                     onClick={() => toggleExpand(item.id)}
-                                    className="ml-2 inline-flex items-center text-gray-500 hover:text-gray-700"
-                                    aria-label={expandedItems.includes(item.id) ? "Show less" : "Show more"}
-                                  >
-                                    <img 
-                                      src={expandedItems.includes(item.id) ? caretUp : caretDown} 
-                                      alt={expandedItems.includes(item.id) ? "Caret up" : "Caret down"} 
-                                      className="w-4 h-4 opacity-50 pt-1" 
-                                    />
-                                  </button>
+                                  />
                                 )}
                               </p>
                             </div>
@@ -203,19 +205,6 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    )}
-
-                    {item.link && (
-                      <div className="flex justify-end mt-4">
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                        >
-                          Learn More
-                        </a>
-                      </div>
                     )}
                   </div>
                 </motion.div>
