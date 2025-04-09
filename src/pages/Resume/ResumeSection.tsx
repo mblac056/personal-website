@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { resumeItems } from '../../data/resume';
-import caretDown from '../../images/caret-down.svg';
-import caretUp from '../../images/caret-up.svg';
+import { resumeItems } from '../../../public/data/resume';
+import caretDown from '/images/caret-down.svg';
+import caretUp from '/images/caret-up.svg';
 
 interface ResumeSectionProps {
   title: string;

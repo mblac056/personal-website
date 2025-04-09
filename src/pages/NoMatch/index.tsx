@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { Link } from "react-router-dom";
 
-const NoMatch: FC = () => {
+function NoMatch() {
   return (
     <section>
       <div className="flex flex-col items-center justify-center gap-y-5">
@@ -15,6 +14,6 @@ const NoMatch: FC = () => {
       </div>
     </section>
   );
-};
+}
 
-export default NoMatch;
+export default NoMatch; 

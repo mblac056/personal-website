@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import ResumeSection from './ResumeSection';
 import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
-import phone from '../../images/phone.svg';
-import email from '../../images/email.svg';
-import home from '../../images/home.svg';
+import phone from '/images/phone.svg';
+import email from '/images/email.svg';
+import home from '/images/home.svg';
 
 
 const sliderStyle = `

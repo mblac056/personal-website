@@ -11,3 +11,10 @@
     font-family: 'Poppins', system-ui, sans-serif;
   }
 } 
+
+:root {
+    --primary-color: #005c1d;
+    --secondary-color: #0a8332;
+  }
+  
+  
