@@ -1,0 +1,217 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { resumeItems } from '../../data/resume';
+import caretDown from '../../images/caret-down.svg';
+import caretUp from '../../images/caret-up.svg';
+
+interface ResumeSectionProps {
+  title: string;
+  type: 'Work Experience' | 'Volunteering' | 'Project' | 'Education' | 'Other' | 'Recognition' | 'Certification';
+  selectedAreas: string[];
+  yearRange: [number, number];
+  isFirstSection?: boolean;
+}
+
+const ResumeSection: React.FC<ResumeSectionProps> = ({
+  title,
+  type,
+  selectedAreas,
+  yearRange,
+}) => {
+  const [expandedItems, setExpandedItems] = useState<number[]>([]);
+
+  const filteredItems = resumeItems
+    .filter(item => item.type === type)
+    .filter(item => 
+      selectedAreas.length === 0 
+        ? item.significant === true // only show significant items when no areas selected
+        : item.areaOfFocus.some(area => selectedAreas.includes(area)) // only show items with matching areas when areas are selected
+    )
+    .filter(item => {
+      const currentYear = new Date().getFullYear();
+      const startYear = parseInt(item.startDate.split(' ')[1] || item.startDate);
+      const endYear = item.endDate 
+        ? parseInt(item.endDate.split(' ')[1] || item.endDate)
+        : currentYear;
+      
+      // Show if there's any overlap between the ranges
+      return !isNaN(startYear) && !isNaN(endYear) && 
+        startYear <= yearRange[1] && // item starts before filter end
+        endYear >= yearRange[0];     // item ends after filter start
+    });
+
+  // Group items by organization
+  const groupedItems = filteredItems.reduce((acc, item) => {
+    if (!acc[item.organization]) {
+      acc[item.organization] = [];
+    }
+    acc[item.organization].push(item);
+    return acc;
+  }, {} as Record<string, typeof filteredItems>);
+
+  // Sort items within each group by end date
+  Object.values(groupedItems).forEach(group => {
+    group.sort((a, b) => {
+      const aDate = a.endDate || a.startDate;
+      const bDate = b.endDate || b.startDate;
+      return new Date(bDate).getTime() - new Date(aDate).getTime();
+    });
+  });
+
+  // Sort organizations by most recent end date in each group
+  const sortedGroups = Object.entries(groupedItems).sort(([, aGroup], [, bGroup]) => {
+    const aLatestDate = aGroup[0].endDate || aGroup[0].startDate;
+    const bLatestDate = bGroup[0].endDate || bGroup[0].startDate;
+    return new Date(bLatestDate).getTime() - new Date(aLatestDate).getTime();
+  });
+
+  // Flatten the groups back into a single array
+  // If Education, reverse the order of the items
+  const sortedItems = sortedGroups.flatMap(([, group]) => group);
+  if (type === 'Education') {
+    sortedItems.reverse();
+  }
+
+  const toggleExpand = (id: number) => {
+    setExpandedItems(prev =>
+      prev.includes(id)
+        ? prev.filter(itemId => itemId !== id)
+        : [...prev, id]
+    );
+  };
+
+  if (sortedItems.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mb-8">
+      <h3 className="text-base font-semibold mb-4">
+        <span className="inline-block bg-[--primary-color] px-4 py-2 text-white uppercase rounded-sm">
+          {title}
+        </span>
+      </h3>
+      <div className="space-y-2">
+        <AnimatePresence mode="popLayout">
+          {sortedItems.map((item, index) => {
+            const isFirstInGroup = index === 0 || sortedItems[index - 1].organization !== item.organization;
+            const isLastInGroup = index === sortedItems.length - 1 || sortedItems[index + 1].organization !== item.organization;
+            const hasMultipleInGroup = !isFirstInGroup || !isLastInGroup;
+            
+            return (
+              <React.Fragment key={item.id}>
+                {isFirstInGroup && hasMultipleInGroup && (
+                  <div className="font-semibold text-sm text-gray-900 mb-2">
+                    {<a href={item.organizationLink} target="_blank" rel="noopener noreferrer">{item.organization}</a>}
+                  </div>
+                )}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.2 }}
+                  layout
+                  className={`relative ${hasMultipleInGroup ? 'pl-6' : ''}`}
+                >
+                  {/* Vertical line */}
+                  {hasMultipleInGroup && !isLastInGroup && (
+                    <div 
+                      className="absolute left-[0.25rem] bottom-[-1rem] w-0.5 bg-[--primary-color] opacity-25"
+                      style={{ top: '0.5rem', bottom: '-1rem' }}
+                    />
+                  )}
+                  
+                  {/* Bullet point */}
+                  {hasMultipleInGroup && (
+                    <div className="absolute left-0 top-[0.3rem] w-2.5 h-2.5 rounded-full bg-[--primary-color]" />
+                  )}
+                  
+                  <div className="pb-2">
+                    <div className="flex justify-between items-start gap-2">
+                      <div className="flex-grow">
+                        {(item.areaOfFocus.includes('Quartet') || item.areaOfFocus.includes('Chorus')) ? (
+                          <p className="font-bold text-gray-900">
+                            {item.title} {!hasMultipleInGroup && item.organization !== 'Quartets' && item.organization !== 'Choruses' && `- ${item.organization}`}
+                          </p>
+                        ) : (
+                          <>
+                            <div>
+                              <p className="font-bold text-gray-900">
+                                {item.title}
+                                {item.description && (
+                                  <button
+                                    onClick={() => toggleExpand(item.id)}
+                                    className="ml-2 inline-flex items-center text-gray-500 hover:text-gray-700"
+                                    aria-label={expandedItems.includes(item.id) ? "Show less" : "Show more"}
+                                  >
+                                    <img 
+                                      src={expandedItems.includes(item.id) ? caretUp : caretDown} 
+                                      alt={expandedItems.includes(item.id) ? "Caret up" : "Caret down"} 
+                                      className="w-4 h-4 opacity-50 pt-1" 
+                                    />
+                                  </button>
+                                )}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              {!hasMultipleInGroup && (
+                                <a href={item.organizationLink} target="_blank" rel="noopener noreferrer"><p className="font-medium text-gray-700">{item.organization}</p></a>
+                              )}
+                            </div>
+                          </>
+                        )}
+                      </div>
+                      <div className="text-right">
+                        <p className="font-medium text-gray-700">
+                          {item.startDate == item.endDate ? item.startDate : item.endDate ? `${item.startDate} - ${item.endDate}` : item.startDate + ' - Present'}
+                        </p>
+                      </div>
+                      {item.logo && (
+                        <img
+                          src={item.logo}
+                          alt={`${item.organization} logo`}
+                          className="w-12 h-12 object-contain ml-4"
+                        />
+                      )}
+                    </div>
+
+                    {item.description && (
+                      <AnimatePresence>
+                        {expandedItems.includes(item.id) && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="mt-2 ml-4 text-gray-700 [&_li]:list-disc [&_li]:ml-4"
+                          >
+                            <div dangerouslySetInnerHTML={{ __html: item.description }} />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+
+                    {item.link && (
+                      <div className="flex justify-end mt-4">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        >
+                          Learn More
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              </React.Fragment>
+            );
+          })}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
+
+export default ResumeSection; 

@@ -1,0 +1,23 @@
+# Enable rewriting
+RewriteEngine On
+
+# If the request is not for a file or directory that exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all requests to index.html
+RewriteRule ^ index.html [QSA,L]
+
+# Enable CORS for fonts
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# Set correct MIME types for fonts
+AddType application/font-woff .woff
+AddType application/font-woff2 .woff2
+AddType application/x-font-ttf .ttf
+AddType application/x-font-otf .otf
+AddType application/vnd.ms-fontobject .eot 
