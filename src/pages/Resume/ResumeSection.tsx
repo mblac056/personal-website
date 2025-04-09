@@ -131,7 +131,21 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                       <div className="flex-grow">
                         {(item.areaOfFocus.includes('Quartet') || item.areaOfFocus.includes('Chorus')) ? (
                           <p className="font-bold text-gray-900">
-                            {item.title} {!hasMultipleInGroup && item.organization !== 'Quartets' && item.organization !== 'Choruses' && `- ${item.organization}`}
+                            {item.title} {!hasMultipleInGroup && item.organization !== 'Quartets' && item.organization !== 'Choruses' && `- ${item.organization}`
+                            }
+                            {item.description && (
+                              <button
+                                onClick={() => toggleExpand(item.id)}
+                                className="ml-2 inline-flex items-center text-gray-500 hover:text-gray-700"
+                                aria-label={expandedItems.includes(item.id) ? "Show less" : "Show more"}
+                              >
+                                <img 
+                                  src={expandedItems.includes(item.id) ? caretUp : caretDown} 
+                                  alt={expandedItems.includes(item.id) ? "Caret up" : "Caret down"} 
+                                  className="w-4 h-4 opacity-50 pt-1" 
+                                />
+                              </button>
+                            )}
                           </p>
                         ) : (
                           <>
@@ -183,7 +197,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="mt-2 ml-4 text-gray-700 [&_li]:list-disc [&_li]:ml-4"
+                            className="mt-2 ml-4 text-gray-700 [&_li]:list-disc [&_li]:ml-4 [&_a]:underline [&_p]:mb-2"
                           >
                             <div dangerouslySetInnerHTML={{ __html: item.description }} />
                           </motion.div>

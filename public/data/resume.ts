@@ -134,6 +134,14 @@ export const resumeItems: ResumeItem[] = [
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
     startDate: 'Apr 2012',
+    description: `<p><a href="https://www.ontariosings.com/">www.ontariosings.com</a></p>
+<ul>
+  <li>Serve as webmaster, managing and maintaining the district website to support recruitment, event promotion, and organizational initiatives.</li>
+  <li>Led a full website redesign and restructuring to adopt emerging technologies, improve user experience, and transition to a new domain aligned with the organization's mission.</li>
+  <li>Ensure all content is optimized for Search Engine Optimization (SEO) and accessible across devices.</li>
+  <li>Conduct ongoing reporting and analysis of website performance, using insights to drive improvements and strategic decisions.</li>
+  <li>Research and evaluate new technologies to anticipate challenges, identify opportunities, and enhance the site's effectiveness.</li>
+</ul>`,
     significant: true
   },
   {
@@ -238,6 +246,10 @@ export const resumeItems: ResumeItem[] = [
     organization: 'AgScape',
     organizationLink: 'https://agscape.ca/',
     startDate: 'May 2024',
+    description: `<ul>
+    <li>Serve as a member of the Board of Directors for AgScape, providing governance oversight and strategic guidance to support agricultural education initiatives across Ontario.</li>
+    <li>Contribute to policy development, organizational planning, and advocacy efforts</li>
+  </ul>`,
     significant: true
   },
   {
@@ -293,7 +305,7 @@ export const resumeItems: ResumeItem[] = [
     id: 102,
     type: 'Volunteering',
     areaOfFocus: ['Web Development'],
-    title: 'Webmaster',
+    title: 'Co-Webmaster',
     organization: 'Fergus Pipe Band',
     organizationLink: 'https://www.ferguspipeband.com/',
     startDate: 'Jan 2022'
@@ -351,6 +363,7 @@ export const resumeItems: ResumeItem[] = [
     title: 'Contributor - Crossword Constructor',
     organization: 'The Harmonizer',
     organizationLink: 'https://www.barbershop.org/news/the-harmonizer-magazine',
+    description: `<p><a href="https://michael-black.com/crosswords/?tag=Barbershop" target="_blank" rel="noopener noreferrer">Try solving these crosswords here</a></p>`,
     startDate: '2021'
   },
   {
@@ -361,6 +374,13 @@ export const resumeItems: ResumeItem[] = [
     organization: 'Ringside Seat',
     organizationLink: 'https://ringsideseat.live/',
     startDate: '2024',
+    description: `<p><a href="https://ringsideseat.live/">ringsideseat.live</a></p>
+    <ul>
+  <li>Ringside Seat is a live event management platform designed for livestock shows, providing real-time tracking of participants and event progress.</li>
+  <li>The platform offers mobile-friendly, swipeable interfaces for audience engagement, with live updates on classes, judging status, and results.</li>
+  <li>Built on a scalable React and Firebase architecture to support shows of all sizes with minimal setup and real-time data synchronization.</li>
+  <li>Customizable for different event types, including cattle shows, horse shows, and other agricultural exhibitions, with support for multi-day events.</li>
+</ul>`,
     significant: true
   },
   {
@@ -371,6 +391,13 @@ export const resumeItems: ResumeItem[] = [
     organization: 'Who\'s Up Live',
     organizationLink: 'https://whosup.live/',
     startDate: '2024',
+    description: `<p><a href="https://whosup.live/">whosup.live</a></p>
+<ul>
+  <li>Who’s Up is a live event management platform built for barbershop singing competitions, delivering real-time performer tracking and stage status updates.</li>
+  <li>The platform features mobile-friendly, swipeable interfaces that keep audiences, competitors, and organizers informed about contest progress.</li>
+  <li>Developed with a scalable React and Firebase architecture to ensure fast, synchronized updates across devices and support multi-session events.</li>
+  <li>Customizable for various contest formats, including quartets, choruses, and specialty festivals, with tools for session management and flexible scheduling.</li>
+</ul>`,
     significant: true
   },
   {
@@ -382,26 +409,27 @@ export const resumeItems: ResumeItem[] = [
     organizationLink: 'https://uottawa.ca/',
     startDate: '2009',
     endDate: '2013',
+    description: `<ul><li>Graduated cum laude</li></ul>`,
     significant: true
   },
   {
     id: 36,
-    type: 'Education',
+    type: 'Certification',
     areaOfFocus: ['Project Management', 'Web Development'],
     title: 'eLearning Certificate Program',
-    organization: 'University of Toronto',
+    organization: 'University of Toronto School of Continuing Studies',
     organizationLink: 'https://learn.utoronto.ca/',
-    startDate: '2015',
+    startDate: '2016',
     endDate: '2016'
   },
   {
     id: 37,
-    type: 'Education',
+    type: 'Certification',
     areaOfFocus: ['Project Management', 'Web Development'],
     title: 'Business Analysis Certificate Program',
-    organization: 'University of Toronto',
+    organization: 'University of Toronto School of Continuing Studies',
     organizationLink: 'https://learn.utoronto.ca/',
-    startDate: '2017',
+    startDate: '2018',
     endDate: '2018'
   },
   {
@@ -1024,5 +1052,23 @@ export const resumeItems: ResumeItem[] = [
     organization: 'AgScape',
     organizationLink: 'https://agscape.ca/',
     startDate: 'May 2024'
+  },
+  {
+    id: 106,
+    type: 'Certification',
+    areaOfFocus: ['Project Management'],
+    title: 'Project Management Fundamentals certification',
+    organization: 'University of Waterloo - Centre for Extended Learning',
+    startDate: '2013',
+    endDate: '2013'
+  },
+  {
+    id: 107,
+    type: 'Certification',
+    areaOfFocus: ['Leadership'],
+    title: 'Essential Skills for New and Potential Supervisors certification',
+    organization: 'University of Waterloo - Centre for Extended Learning',
+    startDate: '2019',
+    endDate: '2019'
   }
 ]; 

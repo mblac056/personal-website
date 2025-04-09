@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import { AnimatePresence } from 'framer-motion';
 import ResumePage from './pages/Resume';
 import Crosswords from './pages/Crosswords';
-import NoMatch from './pages/NoMatch/index.tsx';
+import NoMatch from './pages/404/index.tsx';
 
 function App() {
   return (
