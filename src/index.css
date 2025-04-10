@@ -14,7 +14,11 @@
 
 :root {
     --primary-color: #005c1d;
-    --secondary-color: #0a8332;
   }
+  
+/* Dark mode styles */
+.dark {
+  --primary-color: #09af3e;
+}
   
   

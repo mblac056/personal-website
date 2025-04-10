@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { projects, Project } from '../../data/projects';
-import github from '../../images/github.svg';
-import external from '../../images/external-link.svg';
+import GithubIcon from '../../images/github.svg';
+import ExternalLinkIcon from '../../images/external-link.svg';
 
 const ProjectsPage = () => {
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null);
@@ -23,11 +23,11 @@ const ProjectsPage = () => {
       transition={{ duration: 0.5 }}
       className="max-w-4xl mx-auto"
     >
-      <h1 className="text-4xl font-bold mb-8">Projects</h1>
+      <h1 className="text-4xl font-bold mb-8 dark:text-white">Projects</h1>
       
       {/* Technology filter */}
       <div className="mb-8">
-        <h2 className="text-lg font-semibold mb-4">Filter by Technology</h2>
+        <h2 className="text-lg font-semibold mb-4 dark:text-white">Filter by Technology</h2>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedTechnology(null)}
@@ -73,7 +73,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-white rounded-lg shadow-md overflow-hidden"
+      className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden"
     >
       {project.imageUrl && (
         <div className="h-48 overflow-hidden">
@@ -85,11 +85,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
       )}
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
+        <h3 className="text-xl font-bold mb-2 dark:text-white">{project.title}</h3>
+        <p className="text-gray-600 mb-4 dark:text-white">{project.description}</p>
         
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-2">Technologies</h4>
+          <h4 className="text-sm font-semibold mb-2 dark:text-white">Technologies</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map(tech => (
               <span 
@@ -103,16 +103,15 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         
         <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-500">{project.year}</span>
           <div className="flex gap-2">
             {project.githubUrl && (
               <a 
                 href={project.githubUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               >
-                <img src={github} alt="GitHub" className="w-5 h-5" />
+                <GithubIcon />
               </a>
             )}
             {project.liveUrl && (
@@ -120,9 +119,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 href={project.liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               >
-                <img src={external} alt="Live Site" className="w-5 h-5" />
+                <ExternalLinkIcon />
               </a>
             )}
           </div>

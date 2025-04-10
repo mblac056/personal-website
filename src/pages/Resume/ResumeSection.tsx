@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resumeItems } from '../../data/resume';
-import caretDown from '../../images/caret-down.svg';
-import caretUp from '../../images/caret-up.svg';
+import CaretDownIcon from '../../images/caret-down.svg';
+import CaretUpIcon from '../../images/caret-up.svg';
 
 interface ResumeSectionProps {
   title: string;
@@ -17,16 +17,15 @@ const ExpandButton: React.FC<{
   onClick: () => void;
 }> = ({ isExpanded, onClick }) => {
   return (
-    <button onClick={onClick} className="inline-flex items-center text-gray-500 hover:text-gray-700">
-      <img 
-        src={isExpanded ? caretUp : caretDown} 
-        alt={isExpanded ? "Caret up" : "Caret down"} 
-        className="w-4 h-4 opacity-50 pt-1" 
-      />
+    <button onClick={onClick} className="pl-1 inline-flex items-center text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+      {isExpanded ? (
+        <CaretUpIcon />
+      ) : (
+        <CaretDownIcon />
+      )}
     </button>
   );
 };
-
 
 const ResumeSection: React.FC<ResumeSectionProps> = ({
   title,
@@ -117,7 +116,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
             return (
               <React.Fragment key={item.id}>
                 {isFirstInGroup && hasMultipleInGroup && (
-                  <div className="font-semibold text-sm text-gray-900 mb-2">
+                  <div className="font-semibold text-sm mb-2">
                     {<a href={item.organizationLink} target="_blank" rel="noopener noreferrer">{item.organization}</a>}
                   </div>
                 )}
@@ -146,7 +145,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                     <div className="flex justify-between items-start gap-2">
                       <div className="flex-grow">
                         {(item.areaOfFocus.includes('Quartet') || item.areaOfFocus.includes('Chorus')) ? (
-                          <p className="font-bold text-gray-900">
+                          <p className="font-bold">
                             {item.title} {!hasMultipleInGroup && item.organization !== 'Quartets' && item.organization !== 'Choruses' && `- ${item.organization}`
                             }
                             {item.description && (
@@ -159,7 +158,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                         ) : (
                           <>
                             <div>
-                              <p className="font-bold text-gray-900">
+                              <p className="font-bold">
                                 {item.title}
                                 {item.description && (
                                   <ExpandButton
@@ -178,7 +177,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                         )}
                       </div>
                       <div className="text-right">
-                        <p className="font-medium text-gray-700">
+                        <p className="font-medium">
                           {item.startDate == item.endDate ? item.startDate : item.endDate ? `${item.startDate} - ${item.endDate}` : item.startDate + ' - Present'}
                         </p>
                       </div>
@@ -199,7 +198,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="mt-2 ml-4 text-gray-700 [&_li]:list-disc [&_li]:ml-4 [&_a]:underline [&_p]:mb-2"
+                            className="mt-2 ml-4 [&_li]:list-disc [&_li]:ml-4 [&_a]:underline [&_p]:mb-2"
                           >
                             <div dangerouslySetInnerHTML={{ __html: item.description }} />
                           </motion.div>

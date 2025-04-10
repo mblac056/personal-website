@@ -16,6 +16,7 @@ export const projects: Project[] = [
     description: "A personal website I made for myself, featuring a dynamic resume and project showcase. The one you're looking at right now!",
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     liveUrl: 'https://michael-black.com',
+    githubUrl: 'https://github.com/mblac056/personal-website',
   },
   {
     id: 'piktok',

@@ -16,8 +16,8 @@ const Home = () => {
           alt="Michael Black" 
           className="mx-auto md:float-left md:mr-8 mb-4 w-60 h-60 rounded-full shadow-xl border-2 border-[--primary-color] block" 
         />
-        <h1 className="text-4xl font-medium mb-4 text-center clear-left md:clear-none">Hi, I'm Michael Black</h1>
-        <div className="text-lg font-thin text-gray-600 mb-6">       
+        <h1 className="text-4xl font-medium mb-4 text-center clear-left md:clear-none dark:text-white">Hi, I'm Michael Black</h1>
+        <div className="text-lg font-thin text-gray-600 mb-6 dark:text-gray-200">       
         <p className="mb-4">I'm a web developer, project manager, barbershop harmony enthusiast, and trivia lover based in Fergus, Ontario.</p>
 
           <p className="mb-4">Right now I'm a Full Stack Developer with <a href="https://farmhealthguardian.com/" className="font-medium" target="_blank" rel="noopener noreferrer">Farm Health Guardian</a>, based in nearby Guelph, where I build digital tools that help strengthen biosecurity in the agri-food sector.</p>

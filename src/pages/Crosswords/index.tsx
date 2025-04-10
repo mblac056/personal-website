@@ -78,8 +78,8 @@ const Crosswords = () => {
       {!isSolving ? (
         <>
               <section className="mb-8 max-w-4xl mx-auto">
-              <h1 className="text-4xl font-bold mb-4">Crossword Puzzles</h1>
-              <p className="text-lg text-gray-600 mb-6">
+              <h1 className="text-4xl font-bold mb-4 dark:text-white">Crossword Puzzles</h1>
+              <p className="text-lg text-gray-600 mb-6 dark:text-white">
                 A collection of crossword puzzles I've constructed.
               </p>
       
@@ -105,11 +105,11 @@ const Crosswords = () => {
           {filteredCrosswords.map((puzzle) => (
             <motion.div
               key={puzzle.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
               whileHover={{ y: -4 }}
             >
               <div className="p-6">
-                <h2 className="text-xl font-bold mb-2">{puzzle.title}</h2>
+                <h2 className="text-xl font-bold mb-2 dark:text-white">{puzzle.title}</h2>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {puzzle.tags.map(tag => (
                     <span
@@ -121,9 +121,9 @@ const Crosswords = () => {
                     </span>
                   ))}
                 </div>
-                <p className="text-sm text-gray-500 mb-2">{puzzle.date}</p>
+                <p className="text-sm text-gray-500 mb-2 dark:text-white">{puzzle.date}</p>
                 {puzzle.description && (
-                  <p className="text-gray-600 mb-4 text-sm [&_p]:mb-2 [&_a]:font-bold [&_a]:text-gray-700 [&_a]:hover:text-gray-900">
+                  <p className="text-gray-600 mb-4 text-sm [&_p]:mb-2 [&_a]:font-bold [&_a]:text-gray-700 [&_a]:hover:text-gray-900 dark:text-white">
                     <div dangerouslySetInnerHTML={{ __html: puzzle.description }} />
                   </p>
                 )}
@@ -141,9 +141,9 @@ const Crosswords = () => {
       ) : (
         <div className="bg-base-200 rounded-lg p-6 max-w-4xl mx-auto">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">{selectedPuzzle?.title}</h2>
+            <h2 className="text-2xl font-bold dark:text-white">{selectedPuzzle?.title}</h2>
             <button
-              className="btn btn-ghost"
+              className="btn btn-ghost dark:text-white"
               onClick={handleBackToList}
             >
               Back to List
