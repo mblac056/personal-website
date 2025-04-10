@@ -170,7 +170,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
                             </div>
                             <div className="flex items-center gap-2">
                               {!hasMultipleInGroup && (
-                                <a href={item.organizationLink} target="_blank" rel="noopener noreferrer"><p className="font-medium text-gray-700">{item.organization}</p></a>
+                                <a href={item.organizationLink} target="_blank" rel="noopener noreferrer"><p className="font-medium text-gray-700 dark:text-gray-300">{item.organization}</p></a>
                               )}
                             </div>
                           </>

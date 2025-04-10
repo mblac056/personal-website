@@ -123,7 +123,7 @@ const Crosswords = () => {
                 </div>
                 <p className="text-sm text-gray-500 mb-2 dark:text-white">{puzzle.date}</p>
                 {puzzle.description && (
-                  <p className="text-gray-600 mb-4 text-sm [&_p]:mb-2 [&_a]:font-bold [&_a]:text-gray-700 [&_a]:hover:text-gray-900 dark:text-white">
+                  <p className="text-gray-600 mb-4 text-sm [&_p]:mb-2 [&_a]:font-bold [&_a]:text-gray-700 [&_a]:hover:text-gray-900 dark:text-white dark:[&_a]:hover:text-gray-100 dark:[&_a]:text-gray-300">
                     <div dangerouslySetInnerHTML={{ __html: puzzle.description }} />
                   </p>
                 )}

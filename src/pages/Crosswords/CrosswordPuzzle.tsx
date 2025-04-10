@@ -17,7 +17,7 @@ const CrosswordPuzzle = ({ description, puzFile }: CrosswordPuzzleProps) => {
       <div className="max-w-4xl mx-auto">
         {description && (
           <p 
-            className="text-gray-600 dark:text-white [&_p]:mb-2 [&_a]:font-bold [&_a]:text-gray-700 [&_a]:hover:text-gray-900" 
+            className="dark:text-white [&_p]:mb-2 [&_a]:font-bold custom-link" 
             dangerouslySetInnerHTML={{ __html: description }} 
           />
         )}
