@@ -53,7 +53,7 @@ const ResumePage = () => {
     'Project Management',
     'Web Development',
     'Agriculture',
-    'Governance',
+    'Board Governance',
     'Leadership',
     'Barbershop',
     'Just for Fun', 

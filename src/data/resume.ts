@@ -88,7 +88,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 7,
     type: 'Volunteering',
-    areaOfFocus: ['Governance', 'Leadership'],
+    areaOfFocus: ['Board Governance', 'Leadership'],
     title: 'Chair',
     organization: 'TESS Research Foundation',
     organizationLink: 'https://tessresearch.org/',
@@ -98,7 +98,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 8,
     type: 'Volunteering',
-    areaOfFocus: ['Governance', 'Leadership'],
+    areaOfFocus: ['Board Governance', 'Leadership'],
     title: 'Vice Chair',
     organization: 'TESS Research Foundation',
     organizationLink: 'https://tessresearch.org/',
@@ -147,7 +147,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 13,
     type: 'Volunteering',
-    areaOfFocus: ['Leadership', 'Barbershop', 'Governance'],
+    areaOfFocus: ['Leadership', 'Barbershop', ''],
     title: 'Chair - Bylaws, Operations and Procedures Committee',
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
@@ -167,7 +167,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 15,
     type: 'Volunteering',
-    areaOfFocus: ['Leadership', 'Barbershop', 'Governance'],
+    areaOfFocus: ['Leadership', 'Barbershop', 'Board Governance'],
     title: 'President',
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
@@ -178,7 +178,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 16,
     type: 'Volunteering',
-    areaOfFocus: ['Leadership', 'Barbershop', 'Governance'],
+    areaOfFocus: ['Leadership', 'Barbershop', 'Board Governance'],
     title: 'Executive Vice President',
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
@@ -189,7 +189,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 17,
     type: 'Volunteering',
-    areaOfFocus: ['Leadership', 'Barbershop', 'Governance'],
+    areaOfFocus: ['Leadership', 'Barbershop', 'Board Governance'],
     title: 'Immediate Past President',
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
@@ -211,7 +211,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 19,
     type: 'Volunteering',
-    areaOfFocus: ['Leadership', 'Governance', 'Barbershop'],
+    areaOfFocus: ['Leadership', 'Board Governance', 'Barbershop'],
     title: 'Board Member',
     organization: 'Sing Canada Harmony',
     organizationLink: 'https://singcanadaharmony.ca/',
@@ -222,7 +222,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 20,
     type: 'Volunteering',
-    areaOfFocus: ['Leadership', 'Governance', 'Barbershop', 'Strategic Planning'],
+    areaOfFocus: ['Leadership', 'Board Governance', 'Barbershop', 'Strategic Planning'],
     title: 'Chair - Strategic Planning Committee',
     organization: 'Sing Canada Harmony',
     organizationLink: 'https://singcanadaharmony.ca/',
@@ -241,7 +241,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 21,
     type: 'Volunteering',
-    areaOfFocus: ['Governance', 'Agriculture'],
+    areaOfFocus: ['Board Governance', 'Agriculture'],
     title: 'Board Member',
     organization: 'AgScape',
     organizationLink: 'https://agscape.ca/',
@@ -553,7 +553,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 50,
     type: 'Volunteering',
-    areaOfFocus: ['Barbershop', 'Governance'],
+    areaOfFocus: ['Barbershop', 'Board Governance'],
     title: 'Member - CEO Search Committee',
     organization: 'Barbershop Harmony Society',
     organizationLink: 'https://barbershop.org/',
@@ -1038,7 +1038,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 104,
     type: 'Volunteering',
-    areaOfFocus: ['Agriculture', 'Governance'],
+    areaOfFocus: ['Agriculture', 'Board Governance'],
     title: 'Member - Governance Committee',
     organization: 'AgScape',
     organizationLink: 'https://agscape.ca/',
@@ -1070,5 +1070,121 @@ export const resumeItems: ResumeItem[] = [
     organization: 'University of Waterloo - Centre for Extended Learning',
     startDate: '2019',
     endDate: '2019'
+  },
+  {
+    id: 108,
+    type: 'Volunteering',
+    areaOfFocus: ['Barbershop'],
+    title: 'Member - Awards Committee',
+    organization: 'Ontario District of the Barbershop Harmony Society',
+    organizationLink: 'https://www.ontariosings.com/',
+    startDate: '2020'
+  },
+  {
+    id: 109,
+    type: 'Volunteering',
+    areaOfFocus: ['Other'],
+    title: 'Member - Swag Committee',
+    organization: 'Fergus Pipe Band',
+    organizationLink: 'https://www.ferguspipeband.ca/',
+    startDate: '2024',
+  },
+  {id: 110,
+    type: 'Volunteering',
+    areaOfFocus: ['Board Governance'],
+    title: 'Member - Governance Committee',
+    organization: 'Fergus Pipe Band',
+    organizationLink: 'https://www.ferguspipeband.ca/',
+    startDate: '2024',
+  },
+  {
+    id: 111,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Steve Armstrong Arrangements site',
+    organizationLink: 'https://arrangements.armstrongconsulting.ca/',
+    startDate: '2019',
+    endDate: '2019'
+  },
+  {
+    id: 112,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'B&D Custom Metal Fabricators site',
+    organizationLink: 'https://bdcustommetalfabricators.com/',
+    startDate: '2024',
+    endDate: '2024'
+  },
+  {
+    id: 113,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Bronwynne Wilton Municipal Campaign site',
+    organizationLink: 'https://bronwynnewilton.ca/',
+    startDate: '2022',
+    endDate: '2022'
+  },
+  {
+    id: 114,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Bronwynne Wilton Provincial Campaign site',
+    organizationLink: 'https://bronwynnewilton.ca/',
+    startDate: '2025',
+    endDate: '2025'
+  },
+  {
+    id: 115,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Lily Nye Music site',
+    organizationLink: 'https://lilynyemusic.com/',
+    startDate: '2024',
+    endDate: '2024'
+  },
+  {
+    id: 116,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Rainbow Excelsior site',
+    organizationLink: 'https://rainbowexcelsior.com/',
+    startDate: '2022',
+    endDate: '2022'
+  },
+  {
+    id: 117,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Voices Music site',
+    organizationLink: 'https://voicesmusic.ca/',
+    startDate: '2024',
+    endDate: '2024'
+  },
+  {
+    id: 118,
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development',
+    organization: 'Wilson Machine Knife site',
+    organizationLink: 'https://wilsonmachineknife.com/', 
+    startDate: '2020',
+    endDate: '2020'
+  },
+  {
+    id: 119, 
+    type: 'Project',
+    areaOfFocus: ['Web Development'],
+    title: 'Web Design and Development', 
+    organization: 'Alma Optimists site', 
+    organizationLink: 'https://almaoptimist.club/',
+    startDate: '2022',
+endDate: '2022' 
   }
 ]; 
