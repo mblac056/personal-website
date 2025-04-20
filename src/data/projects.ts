@@ -32,11 +32,12 @@ export const projects: Project[] = [
     liveUrl: 'https://ringsideseat.com',
   },
   {
-    id: 'barbershop-scores-parser',
-    title: 'Barbershop Scores Parser',
+    id: 'scoresheet-tools',
+    title: 'Scoresheet Tools',
     description: 'A Python tool for parsing barbershop competition scoresheets from PDF format into CSV and JSON formats. This tool can handle both single-round and multi-round competition scoresheets.',
     technologies: ['Python'],
-    githubUrl: 'https://github.com/mblac056/barbershop-scores-parser',
+    liveUrl: 'https://scoresheet.tools/',
+    githubUrl: 'https://github.com/mblac056/scoresheet-tools-backend',
   },
   {
     id: 'whos-up-live',
