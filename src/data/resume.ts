@@ -618,6 +618,15 @@ export const resumeItems: ResumeItem[] = [
     endDate: '2018'
   },
   {
+    id: 120,
+    type: 'Other',
+    areaOfFocus: ['Barbershop', 'Quartet'],
+    title: 'Tenor - Distant Smash Hit',
+    organization: 'Quartets',
+    startDate: '2018',
+    endDate: '2018'
+  },
+  {
     id: 57,
     type: 'Volunteering',
     areaOfFocus: ['Other'],
