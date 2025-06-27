@@ -232,7 +232,7 @@ export const resumeItems: ResumeItem[] = [
   {
     id: 101,
     type: 'Volunteering',
-    areaOfFocus: ['Web Development'],
+    areaOfFocus: ['Web Development', 'Barbershop'],
     title: 'Webmaster',
     organization: 'Sing Canada Harmony',
     organizationLink: 'https://singcanadaharmony.ca/',

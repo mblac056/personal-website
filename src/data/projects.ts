@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: 'Ringside Seat',
     description: 'A show tracking PWA designed for livestock expos, competitions and shows, allowing users to access up-to-the-second details about the status of each class and heat and results.',
     technologies: ['React', 'Javascript', 'Firebase', 'Tailwind CSS', 'Material UI'],
-    liveUrl: 'https://ringsideseat.com',
+    liveUrl: 'https://ringsideseat.live',
   },
   {
     id: 'scoresheet-tools',
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     title: "Who's Up Live",
     description: "An event tracking application specifically designed for barbershop conventions, allowing users to access up-to-the-second details about the status of each performer. It includes an optional self-scoring feature for attendees to track their scores against the official panel.",
     technologies: ['React', 'Javascript', 'Firebase', 'Tailwind CSS', 'Material UI'],
-    liveUrl: 'https://whosuplive.com',
+    liveUrl: 'https://whosup.live',
   },
   {
     id: 'steve-armstrong-arrangements',
