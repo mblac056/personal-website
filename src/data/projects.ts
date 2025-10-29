@@ -11,6 +11,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'feedback-schedule',
+    title: 'Feedback Schedule',
+    description: 'A comprehensive feedback scheduling system designed for barbershop competitions using the BHS contest entry and style feedback types. Features drag-and-drop session management, conflict detection, and automated report generation.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'jsPDF'],
+    liveUrl: 'https://feedbackschedule.com',
+    githubUrl: 'https://github.com/mblac056/feedbackschedule',
+    year: 2024,
+  },
+  {
     id: 'personal-website',
     title: "Personal Website",
     description: "A personal website I made for myself, featuring a dynamic resume and project showcase. The one you're looking at right now!",
