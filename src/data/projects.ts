@@ -17,7 +17,13 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'jsPDF'],
     liveUrl: 'https://feedbackschedule.com',
     githubUrl: 'https://github.com/mblac056/feedbackschedule',
-    year: 2024,
+  },
+  {
+    id: 'barber-brainiac',
+    title: 'Barber Brainiac',
+    description: 'An interactive barbershop trivia quiz game focused on knowledge of barbershop history.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    liveUrl: 'https://barberbrainiac.com/',
   },
   {
     id: 'personal-website',
