@@ -153,7 +153,7 @@ const Crosswords = () => {
           {selectedPuzzle && (
             <CrosswordPuzzle
               description={selectedPuzzle.description}
-              puzFile={selectedPuzzle.puzFile}
+              puzzleId={selectedPuzzle.puzzleId}
             />
           )}
         </div>

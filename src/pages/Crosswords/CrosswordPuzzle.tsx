@@ -2,10 +2,13 @@ import { motion } from 'framer-motion';
 
 interface CrosswordPuzzleProps {
   description?: string;
-  puzFile: string;
+  puzzleId: string;
 }
 
-const CrosswordPuzzle = ({ description, puzFile }: CrosswordPuzzleProps) => {
+const CrosswordPuzzle = ({ description, puzzleId }: CrosswordPuzzleProps) => {
+  const PUZZLE_SET = '5a46f42ef134628d1cea2a0458a51cd2d788720b2010eb08bdcecc65ee0ccdf4';
+  const iframeSrc = `https://puzzleme.amuselabs.com/pmm/crossword?id=${puzzleId}&set=${PUZZLE_SET}&embed=1`;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,10 +26,20 @@ const CrosswordPuzzle = ({ description, puzFile }: CrosswordPuzzleProps) => {
         )}
       </div>
       
-      <div 
-        className="w-full"
-        dangerouslySetInnerHTML={{ __html: puzFile }}
-      />
+      <div className="w-full">
+        <iframe
+          height="700px"
+          width="100%"
+          allow="web-share; fullscreen"
+          className="border-none w-full block m-0"
+          style={{
+            border: 'none',
+            position: 'static'
+          }}
+          src={iframeSrc}
+          aria-label="Puzzle Me Game"
+        />
+      </div>
     </motion.div>
   );
 };
