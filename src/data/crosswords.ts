@@ -9,6 +9,14 @@ export interface Crossword {
 
 export const crosswords: Crossword[] = [
   {
+    id: 'things-are-looking-up',
+    title: 'Things Are Looking Up',
+    date: '2025-11-01',
+    description: `<p>Published in the <a href="https://files.barbershop.org/PDFs/Harmonizer/2025-issues/Harmonizer_vol85_no6_novdec2025.pdf#page=10" target="_blank" rel="noreferrer noopener">November / December 2025 Harmonizer</a></p>`,
+    tags: ['Barbershop'],
+    puzzleId: '278a1ee2'
+  },
+  {
     id: 'submission-7',
     title: 'Submission 7',
     date: '2025-11-19',
