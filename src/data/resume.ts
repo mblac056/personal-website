@@ -335,7 +335,7 @@ export const resumeItems: ResumeItem[] = [
     organization: 'Quartets',
     organizationLink: 'https://shoptimusprimequartet.com/',
     startDate: '2011',
-    description: '<ul><li>2012 Ontario District Quartet Champion</li><li>2015, International Collegiate Silver Medalist</li><li>2017 International Quartet Representative</li></ul>',
+    description: '<ul><li>2012 Ontario District Quartet Champion</li><li>2015, International Collegiate Silver Medalist</li><li>2017 International Quartet Representative</li><li>The quartet in <a href="https://www.youtube.com/watch?v=zCgVnKC0fkE" target="_blank" rel="noopener noreferrer">Cuphead</a></li></ul>',
     significant: true
   },
   {
@@ -368,13 +368,13 @@ export const resumeItems: ResumeItem[] = [
   },
   {
     id: 33,
-    type: 'Project',
+    type: 'Work Experience',
     areaOfFocus: ['Web Development', 'Agriculture'],
-    title: 'Co-Founder',
+    title: 'Co-Founder / Product & Engineering Lead',
     organization: 'Ringside Seat',
-    organizationLink: 'https://ringsideseat.live/',
+    organizationLink: 'https://ringsideseat.com/',
     startDate: '2024',
-    description: `<p><a href="https://ringsideseat.live/">ringsideseat.live</a></p>
+    description: `<p><a href="https://ringsideseat.com/">ringsideseat.com</a></p>
     <ul>
   <li>Ringside Seat is a live event management platform designed for livestock shows, providing real-time tracking of participants and event progress.</li>
   <li>The platform offers mobile-friendly, swipeable interfaces for audience engagement, with live updates on classes, judging status, and results.</li>
