@@ -9,6 +9,14 @@ export interface Crossword {
 
 export const crosswords: Crossword[] = [
   {
+    id: 'submission-8',
+    title: 'Submission 8',
+    date: '2026-02-13',
+    tags: ['NYT Rejects'],
+    description: `Submitted Jan 6, 2026; Rejected Feb 13, 2026`,
+    puzzleId: 'bb736026'
+  },
+  {
     id: 'things-are-looking-up',
     title: 'Things Are Looking Up',
     date: '2025-11-01',
