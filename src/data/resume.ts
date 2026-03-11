@@ -1087,7 +1087,8 @@ export const resumeItems: ResumeItem[] = [
     title: 'Member - Awards Committee',
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
-    startDate: '2020'
+    startDate: '2020',
+    endDate: '2025'
   },
   {
     id: 109,
