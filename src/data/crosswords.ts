@@ -9,6 +9,14 @@ export interface Crossword {
 
 export const crosswords: Crossword[] = [
   {
+    id: 'tight-formation',
+    title: 'Tight Formation',
+    date: '2026-03-01',
+    tags: ['Barbershop'],
+    description: `<p>Published in the <a href="https://files.barbershop.org/PDFs/Harmonizer/2026-issues/Harmonizer_vol86_no2_marapr2026.pdf#page=12" target="_blank" rel="noreferrer noopener">March / April 2026 Harmonizer</a></p>`,
+    puzzleId: '07b692ec'
+  },
+  {
     id: 'submission-8',
     title: 'Submission 8',
     date: '2026-02-13',
