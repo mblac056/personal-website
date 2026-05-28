@@ -52,7 +52,7 @@ export const projects: Project[] = [
     description: 'A Python tool for parsing barbershop competition scoresheets from PDF format into CSV and JSON formats. This tool can handle both single-round and multi-round competition scoresheets.',
     technologies: ['Python'],
     liveUrl: 'https://scoresheet.tools/',
-    githubUrl: 'https://github.com/mblac056/scoresheet-tools-backend',
+    githubUrl: 'https://github.com/mblac056/scoresheet-tools-frontend',
   },
   {
     id: 'whos-up-live',
