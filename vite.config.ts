@@ -25,4 +25,7 @@ export default defineConfig({
       "@entities": path.resolve("src/entities"),
     },
   },
+  build: {
+    target: "es2020",
+  },
 });
