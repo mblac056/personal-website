@@ -9,6 +9,14 @@ export interface Crossword {
 
 export const crosswords: Crossword[] = [
   {
+    id: 'international-2026',
+    title: 'International 2026',
+    date: '2026-06-16',
+    tags: ['Barbershop'],
+    description: `<p>Published in the <a href="https://files.barbershop.org/Events/International-Conventions/International-2026/2026-St.-Louis-Program-Book-b.pdf#page=14" target="_blank" rel="noreferrer noopener">St. Louis International Convention Program Book</a></p>`,
+    puzzleId: 'b067d881'
+  },
+  {
     id: 'tight-formation',
     title: 'Tight Formation',
     date: '2026-03-01',
