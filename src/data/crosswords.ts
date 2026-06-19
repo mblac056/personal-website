@@ -13,7 +13,7 @@ export const crosswords: Crossword[] = [
     title: 'International 2026',
     date: '2026-06-16',
     tags: ['Barbershop'],
-    description: `<p>Published in the <a href="https://files.barbershop.org/Events/International-Conventions/International-2026/2026-St.-Louis-Program-Book-b.pdf#page=14" target="_blank" rel="noreferrer noopener">St. Louis International Convention Program Book</a></p>`,
+    description: `<p>Published in the <a href="https://files.barbershop.org/Events/International-Conventions/International-2026/2026-St.-Louis-Program-Book-c.pdf#page=14" target="_blank" rel="noreferrer noopener">St. Louis International Convention Program Book</a></p>`,
     puzzleId: 'b067d881'
   },
   {

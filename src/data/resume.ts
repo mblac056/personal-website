@@ -869,7 +869,9 @@ export const resumeItems: ResumeItem[] = [
     title: 'Member - Strategic Planning Committee',
     organization: 'Ontario District of the Barbershop Harmony Society',
     organizationLink: 'https://www.ontariosings.com/',
-    startDate: '2024'
+    startDate: '2024',
+    endDate: '2026'
+
   },
   {
     id: 83,
