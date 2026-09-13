@@ -286,10 +286,10 @@ export const resumeItems: ResumeItem[] = [
     id: 26,
     type: 'Volunteering',
     areaOfFocus: ['Barbershop'],
-    title: 'Candidate Administrative Judge',
+    title: 'Certified Administrative Judge',
     organization: 'Barbershop Harmony Society',
     organizationLink: 'https://barbershop.org/',
-    startDate: '2024',
+    startDate: '2026',
     significant: true
   },
   {
