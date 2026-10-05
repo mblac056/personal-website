@@ -24,7 +24,7 @@ const Home = () => {
 
           <p className="mb-4">I'm also proud to serve as Chair of the Board for the <a href="https://www.tessresearch.org/" className="font-medium" target="_blank" rel="noopener noreferrer">TESS Research Foundation</a>, a patient-led non-profit working to improve the lives of families affected by SLC13A5 Epilepsy. <a href="https://youtu.be/FjhdkjMSZA0?si=h6kjV0RvwHNuCsGw" className="font-medium" target="_blank" rel="noopener noreferrer">Here's a quick video</a> if you want to learn more.</p>
 
-          <p className="mb-4">Outside of work, you'll usually find me hanging out with my wife Amber and son Rowan, solving or building crossword puzzles, working on custom websites, enjoying a good beer, 3D printing something, or listening to a podcast. Always looking for the next great project — if you've got an idea, <a href="mailto:michael@michael-black.com" className="font-medium" target="_blank" rel="noopener noreferrer">drop me a line</a>. I love a new challenge!</p>
+          <p className="mb-4">Outside of work, you'll usually find me hanging out with my wife, Amber, and sons, Rowan and Malcolm, solving or building crossword puzzles, working on custom websites, enjoying a good beer, 3D printing something, or listening to a podcast. Always looking for the next great project — if you've got an idea, <a href="mailto:michael@michael-black.com" className="font-medium" target="_blank" rel="noopener noreferrer">drop me a line</a>. I love a new challenge!</p>
 
           <p className="text-lg text-[--primary-color]">
             Like what I do? Please consider <a href="https://www.buymeacoffee.com/michael.black" className="font-medium" target="_blank" rel="noopener noreferrer">buying me a coffee</a>.
